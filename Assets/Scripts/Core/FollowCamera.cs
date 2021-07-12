@@ -1,15 +1,18 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+namespace RPG.Core
 {
-    [SerializeField] private GameObject target;
-    // Start is called before the first frame update
+    public class FollowCamera : MonoBehaviour
+    {
+        [SerializeField] private GameObject target;
+        // Start is called before the first frame update
   
 
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        transform.position = target.transform.position;
+        // Update is called once per frame
+        void LateUpdate()
+        {
+            transform.position = target.transform.position;
+        }
     }
 }
+
