@@ -1,5 +1,5 @@
 ﻿
-namespace RPG.Combat
+namespace RPG.Core
 {
     using UnityEngine;
 
@@ -25,6 +25,7 @@ namespace RPG.Combat
             if(isDead)
                 return;
             GetComponent<Animator>().SetTrigger("die");
+            GetComponent<ActionScheduler>().CancelCurrentAction();
             isDead = true;
         }
     }
