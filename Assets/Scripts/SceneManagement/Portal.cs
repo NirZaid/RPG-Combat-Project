@@ -42,15 +42,14 @@ namespace RPG.SceneManagement
             Fader fader = FindObjectOfType<Fader>();
             
             yield return fader.FadeOut(fadeOutTime);
-            Debug.Log("Load next scene now");
             yield return SceneManager.LoadSceneAsync(sceneIndex);
             
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
-            
+
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.FadeIn(fadeInTime);
-            
+
             Destroy(gameObject);
         }
 

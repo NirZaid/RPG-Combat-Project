@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7306436253904484342}
-  - component: {fileID: 6208799885305118211}
+  - component: {fileID: 8758843227509241484}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6208799885305118211
+--- !u!114 &8758843227509241484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7306436253904484345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d0761c5b046274ea87fbf795be16e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 273e1b94c04097849b3e60b7f7d54792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   persistentObjectPrefab: {fileID: 3469638871122214322, guid: 005cebec30127e3468f65a31382e0dea,
@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 5640174962911093969, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7798742
+      value: 1.7773585
       objectReference: {fileID: 0}
     - target: {fileID: 5640174962911093971, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
