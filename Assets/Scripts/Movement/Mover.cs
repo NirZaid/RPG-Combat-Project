@@ -1,12 +1,13 @@
-﻿using System;
-using RPG.Core;
+﻿using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
+using RPG.Saving;
+
 
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] private Transform target;
         [SerializeField] private float maxSpeed = 6f;
@@ -17,7 +18,7 @@ namespace RPG.Movement
 
         // Update is called once per frame
 
-        private void Start()
+        private void Awake()
         {
             _health = GetComponent<Health>();
             _animator = GetComponent<Animator>();
@@ -58,6 +59,20 @@ namespace RPG.Movement
         }
 
 
+        public object CaptureState()
+        {
+            SerializableVector3 vector = new SerializableVector3(transform.position);
+            return vector;
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializableVector3 position = (SerializableVector3) state;
+            _navMeshAgent.enabled = false;
+            transform.position = position.toVector();
+            _navMeshAgent.enabled = true;
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
     }
 }
 

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace RPG.SceneManagement
 {
@@ -13,11 +11,16 @@ namespace RPG.SceneManagement
             canvasGroup = GetComponent<CanvasGroup>();
         }
 
+        public void FadeOutImmediate()
+        {
+            canvasGroup.alpha = 1;
+        }
+
         public IEnumerator FadeOut(float time)
         {
             while (canvasGroup.alpha < 1)
             {
-                canvasGroup.alpha += Time.deltaTime / time;
+                canvasGroup.alpha += (Time.deltaTime / time);
                 yield return null;
             }
         }
@@ -26,7 +29,7 @@ namespace RPG.SceneManagement
         {
             while (canvasGroup.alpha > 0)
             {
-                canvasGroup.alpha -= Time.deltaTime / time;
+                canvasGroup.alpha -= (Time.deltaTime / time);
                 yield return null;
             }
         }
