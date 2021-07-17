@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 5640174962911093969, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.775281
+      value: 1.7757847
       objectReference: {fileID: 0}
     - target: {fileID: 5640174962911093971, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 1797504371684287576, guid: 1bf0a276414095f4e9e659973a34ff35,
         type: 3}
       propertyPath: uniqueIdentifier
-      value: e000f682-7639-42cf-92c7-90ae89fed37d
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 2490082940595105697, guid: 1bf0a276414095f4e9e659973a34ff35,
         type: 3}
@@ -280,6 +280,12 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 9030696824952423510, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: c6499f731d1257e4aa96483bcd9104bc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf0a276414095f4e9e659973a34ff35, type: 3}
 --- !u!4 &5182271197359611602 stripped

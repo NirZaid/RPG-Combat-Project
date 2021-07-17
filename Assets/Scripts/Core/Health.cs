@@ -1,5 +1,4 @@
 ﻿using RPG.Saving;
-
 namespace RPG.Core
 {
     using UnityEngine;
