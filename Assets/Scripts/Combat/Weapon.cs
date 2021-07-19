@@ -1,5 +1,5 @@
-﻿using RPG.Core;
-using UnityEngine;
+﻿using UnityEngine;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -9,6 +9,7 @@ namespace RPG.Combat
         [SerializeField] private AnimatorOverrideController weaponOverride = null;
         [SerializeField] private GameObject equippedPrefab = null;
         [SerializeField] private float weaponDamage = 5f;
+        [SerializeField] private float weaponPercentageBonus = 0f;
         [SerializeField] private float weaponRange = 2f;
         [SerializeField] private bool isRightHanded = true;
         [SerializeField] private Projectile projectile;
@@ -51,16 +52,21 @@ namespace RPG.Combat
             return weaponRange;
         }
 
+        public float GetPercentageBonus()
+        {
+            return weaponPercentageBonus;
+        }
+
         public bool HasProjectile()
         {
             return projectile != null;
         }
 
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator, float calculatedDamage)
         {
             Projectile projectileInstance = Instantiate(projectile, GetHandTransform(rightHand, leftHand).position,
                 Quaternion.identity);
-            projectileInstance.SetTarget(target, weaponDamage);
+            projectileInstance.SetTarget(target,instigator, calculatedDamage);
         }
 
         private void DestroyOldWeapon(Transform rightHand, Transform leftHand)
