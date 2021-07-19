@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2046542471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4665891995788315858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2b26deb54b3544e928eb5fff84d99d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: {fileID: 0}
 --- !u!1 &7306436253904484345
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,19 +119,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &487972343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930297984417882097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2b26deb54b3544e928eb5fff84d99d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: {fileID: 0}
 --- !u!1001 &3107554322552663012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 5640174962911093969, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7783934
+      value: 1.7801205
       objectReference: {fileID: 0}
     - target: {fileID: 5640174962911093971, guid: fd086f2d11354c74f973331518d085df,
         type: 3}
@@ -354,21 +328,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a4692347ab05c4c9410dfff7fcb45b, type: 3}
---- !u!1 &8930297984417882097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4031241161022556671, guid: c9a4692347ab05c4c9410dfff7fcb45b,
-    type: 3}
-  m_PrefabInstance: {fileID: 5485123527893030414}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8545787334984702359 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4217531459071119257, guid: c9a4692347ab05c4c9410dfff7fcb45b,
-    type: 3}
-  m_PrefabInstance: {fileID: 5485123527893030414}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4665891995788315858 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 927608229406350044, guid: c9a4692347ab05c4c9410dfff7fcb45b,
     type: 3}
   m_PrefabInstance: {fileID: 5485123527893030414}
   m_PrefabAsset: {fileID: 0}
@@ -379,6 +341,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7306436253904484342}
     m_Modifications:
+    - target: {fileID: 114086332103545820, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[0].hotspot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086332103545820, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[1].hotspot.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086332103545820, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[2].hotspot.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086332103545820, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: cursorMappings.Array.data[3].hotspot.x
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1797504371684287576, guid: 1bf0a276414095f4e9e659973a34ff35,
         type: 3}
       propertyPath: uniqueIdentifier
@@ -739,6 +721,12 @@ PrefabInstance:
       propertyPath: characterClass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2678318074551053014, guid: 1bf0a276414095f4e9e659973a34ff35,
+        type: 3}
+      propertyPath: levelUpEffectPrefab
+      value: 
+      objectReference: {fileID: 2618010810320084270, guid: aa89176e548e7ce4681526034efeff62,
+        type: 3}
     - target: {fileID: 3713158080190897720, guid: 1bf0a276414095f4e9e659973a34ff35,
         type: 3}
       propertyPath: healthPoints

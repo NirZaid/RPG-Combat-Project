@@ -4,7 +4,7 @@ using RPG.Core;
 using RPG.Movement;
 using RPG.Saving;
 using UnityEngine;
-using RPG.Resources;
+using RPG.Attributes;
 using RPG.Stats;
 
 namespace RPG.Combat

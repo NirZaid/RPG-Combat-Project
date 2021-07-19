@@ -44,6 +44,7 @@ namespace RPG.SceneManagement
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
 
             fader.FadeOutImmediate();
+            //fader.FadeOut(fadeOutTime);
             
             savingWrapper.Save();
 
