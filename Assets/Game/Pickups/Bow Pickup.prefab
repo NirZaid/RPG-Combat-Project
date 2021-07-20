@@ -18,6 +18,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fcd5970e8ae70324abd7eff17511fdab,
         type: 2}
+    - target: {fileID: 3215481424924122204, guid: 066738bbe4cd3a746b93dee2f64a76a7,
+        type: 3}
+      propertyPath: weaponConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: fcd5970e8ae70324abd7eff17511fdab,
+        type: 2}
     - target: {fileID: 4863740145377153900, guid: 066738bbe4cd3a746b93dee2f64a76a7,
         type: 3}
       propertyPath: m_Radius
