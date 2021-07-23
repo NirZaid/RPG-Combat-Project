@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2fae2579715a64fb0df4b270d2cdf0, type: 3}
   m_Name: Red Bow
   m_EditorClassIdentifier: 
+  itemID: 930b61ed-afe5-4fef-a899-136f153dc616
+  displayName: Bow
+  description: Good for taking down adventurers' knees
+  icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
+  pickup: {fileID: 4626796243347501338, guid: 69acede941c9ba94fae560f3c8a89867, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   weaponOverride: {fileID: 22100000, guid: dc313e5f3e8ac8b4fafbe5721e93de67, type: 2}
   equippedPrefab: {fileID: 114407606929418228, guid: 1bc7e8b6aa546e649b7b8a53835be753,
     type: 3}

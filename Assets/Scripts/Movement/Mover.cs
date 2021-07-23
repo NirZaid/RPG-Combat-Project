@@ -1,7 +1,7 @@
 ﻿using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
-using RPG.Saving;
+using GameDevTV.Saving;
 using RPG.Attributes;
 
 
@@ -72,7 +72,7 @@ namespace RPG.Movement
         {
             SerializableVector3 position = (SerializableVector3) state;
             _navMeshAgent.enabled = false;
-            transform.position = position.toVector();
+            transform.position = position.ToVector();
             _navMeshAgent.enabled = true;
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }

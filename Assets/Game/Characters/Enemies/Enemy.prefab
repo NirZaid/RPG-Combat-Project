@@ -46,6 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ebd202efee4ba1b72a7cb5dcf75198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4496517446721005403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641623334556761632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6d4a169e4c3d448882356ce5b9c413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibray: {fileID: 11400000, guid: fab0336bf6f29e249a38436d198867ce, type: 2}
 --- !u!114 &3719601768871066487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
         type: 3}
@@ -231,6 +245,31 @@ PrefabInstance:
     - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
         type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4496517446721005403}
+    - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RandomDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6374905691633811407, guid: 0aa84faba2294634081b2683fcb9988c,

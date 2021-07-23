@@ -23,6 +23,7 @@ namespace RPG.Control
         [SerializeField] private float maxNavMeshProjectionDistance = 1f;
         
         private Health _health;
+        private bool isDraggingUI = false;
 
         private void Awake()
         {
@@ -86,7 +87,27 @@ namespace RPG.Control
 
         private bool InteractWithUI()
         {
-            return EventSystem.current.IsPointerOverGameObject();
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDraggingUI = false;
+            }
+
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isDraggingUI = true;
+                }
+                return true;
+            }
+
+            if (isDraggingUI)
+            {
+                return true;
+            }
+
+            return false;
+
         }
 
         private void SetCursor(CursorType type)

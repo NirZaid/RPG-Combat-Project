@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using GameDevTV.Inventories;
+using UnityEngine;
 using RPG.Attributes;
+using RPG.Stats;
 
 namespace RPG.Combat
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New  Weapon", order = 0)]
-    public class WeaponConfig : ScriptableObject
+    public class WeaponConfig : EquipableItem, IModifierProvider
     {
         [SerializeField] private AnimatorOverrideController weaponOverride = null;
         [SerializeField] private Weapon equippedPrefab = null;
@@ -90,6 +93,21 @@ namespace RPG.Combat
             Destroy(oldWeapon.gameObject);
         }
 
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return weaponDamage;
+            }
+        }
+
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return weaponPercentageBonus;
+            }
+        }
     }
 }
 

@@ -108,7 +108,7 @@ namespace RPG.Stats
 
       
 
-        private int GetLevel()
+        public int GetLevel()
         {
             return currentLevel.value;
         }
