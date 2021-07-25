@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9034882745243413005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 95b9faf6-59b5-407e-a09a-67be4f5c799f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Mark? Who's mark?
+  children:
+  - 452c2d50-bfd1-43ea-b915-9087bc4fd9b7
+  - e6c248d8-3a9e-4efd-a207-ae7591d836d8
+  rect:
+    serializedVersion: 2
+    x: 547
+    y: 215
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5303048014592352631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 452c2d50-bfd1-43ea-b915-9087bc4fd9b7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: That's your name!
+  children:
+  - 54410bef-42a6-4b7f-834c-5db4b13ff74c
+  rect:
+    serializedVersion: 2
+    x: 879
+    y: 297
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3062141382321345028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 1ce5a7cf-bd90-4f65-af53-64ab450522eb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I want to buy some stuff
+  children:
+  - 237f3380-42f1-4da5-b542-c66d1ca33dc9
+  rect:
+    serializedVersion: 2
+    x: 2135
+    y: 136
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1696202394008609453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: e6c248d8-3a9e-4efd-a207-ae7591d836d8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Forget it, Let's get down to business.
+  children:
+  - a6aabb97-8cd5-4cf6-9e72-2b3a8c115704
+  rect:
+    serializedVersion: 2
+    x: 1464
+    y: 182
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1205355495749730433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 7da62597-7b3a-4708-9747-c15538d400d3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: General Kenobi!
+  children:
+  - bf931815-afa1-412d-a87e-c65a14c704f4
+  rect:
+    serializedVersion: 2
+    x: 314
+    y: 99
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d7c5c2ba9374540a2a963ff8c106b7, type: 3}
+  m_Name: Hello There
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 2632014415374933879}
+  - {fileID: -1205355495749730433}
+  - {fileID: 5986125172592612688}
+  - {fileID: -9034882745243413005}
+  - {fileID: -5303048014592352631}
+  - {fileID: 7496131707415020918}
+  - {fileID: -1696202394008609453}
+  - {fileID: 8383879591235888414}
+  - {fileID: 5701903065700526126}
+  - {fileID: -3062141382321345028}
+  - {fileID: 2173793590841016438}
+  - {fileID: 6168630161660034508}
+  - {fileID: 3908706255020381036}
+  - {fileID: 1452578143576978324}
+  - {fileID: 1699642527765815114}
+  - {fileID: 3180227703687713366}
+  - {fileID: 8908507299706687543}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1452578143576978324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 54410bef-42a6-4b7f-834c-5db4b13ff74c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: No it's not!
+  children:
+  - e6c248d8-3a9e-4efd-a207-ae7591d836d8
+  rect:
+    serializedVersion: 2
+    x: 1131
+    y: 286
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1699642527765815114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 237f3380-42f1-4da5-b542-c66d1ca33dc9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Dude, i'm a guard, not a shopkeeper.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2385
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2173793590841016438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: e8f2ed9b-0557-4ad8-991a-609cc5aff736
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm here to kill you!
+  children:
+  - 244cf6bb-e050-45f9-a823-7b745c985915
+  rect:
+    serializedVersion: 2
+    x: 2129
+    y: 334
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2632014415374933879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: a1555594-ed73-4e28-b166-13da827af6b7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hello There!
+  children:
+  - 7da62597-7b3a-4708-9747-c15538d400d3
+  - 40cb77c1-2bc1-4490-8723-221705c8de6a
+  - 995eaf6c-d049-4cb0-b14d-95328f26f5d6
+  rect:
+    serializedVersion: 2
+    x: 63
+    y: 237
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3180227703687713366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: d7632766-9001-4707-aaae-50851ef889a8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: What? what do you mean... what? that's a really weird thing to ask from a
+    stranger.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2386
+    y: 231
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3908706255020381036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: a5355d4d-c985-44a7-b2f0-ea80935b62f1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: What can i do for you?
+  children:
+  - 4455d024-4f4c-4090-94fd-d02a272e5240
+  - 1ce5a7cf-bd90-4f65-af53-64ab450522eb
+  - e8f2ed9b-0557-4ad8-991a-609cc5aff736
+  rect:
+    serializedVersion: 2
+    x: 1385
+    y: 433
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5701903065700526126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 4455d024-4f4c-4090-94fd-d02a272e5240
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I need a Quest!
+  children:
+  - d7632766-9001-4707-aaae-50851ef889a8
+  rect:
+    serializedVersion: 2
+    x: 2136
+    y: 231
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5986125172592612688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 40cb77c1-2bc1-4490-8723-221705c8de6a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Oh hi Mark!
+  children:
+  - 95b9faf6-59b5-407e-a09a-67be4f5c799f
+  rect:
+    serializedVersion: 2
+    x: 331
+    y: 244
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6168630161660034508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 995eaf6c-d049-4cb0-b14d-95328f26f5d6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Hey!
+  children:
+  - a5355d4d-c985-44a7-b2f0-ea80935b62f1
+  rect:
+    serializedVersion: 2
+    x: 367
+    y: 431
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7496131707415020918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: bf931815-afa1-412d-a87e-c65a14c704f4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: What? That's not my name...
+  children:
+  - 452c2d50-bfd1-43ea-b915-9087bc4fd9b7
+  - e6c248d8-3a9e-4efd-a207-ae7591d836d8
+  rect:
+    serializedVersion: 2
+    x: 553
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8383879591235888414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: a6aabb97-8cd5-4cf6-9e72-2b3a8c115704
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Business? What are you talking about?
+  children:
+  - 4455d024-4f4c-4090-94fd-d02a272e5240
+  - 1ce5a7cf-bd90-4f65-af53-64ab450522eb
+  - e8f2ed9b-0557-4ad8-991a-609cc5aff736
+  rect:
+    serializedVersion: 2
+    x: 1674
+    y: 128
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8908507299706687543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 244cf6bb-e050-45f9-a823-7b745c985915
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Not if i'll kill you first!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2384
+    y: 336
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Attack

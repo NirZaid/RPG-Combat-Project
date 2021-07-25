@@ -184,10 +184,10 @@ namespace RPG.Dialogue.Editor
             }
             GUILayout.EndHorizontal();
 
-            foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
+            /*foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
                 EditorGUILayout.LabelField(childNode.GetText());
-            }
+            }*/
             
             GUILayout.EndArea();
         }

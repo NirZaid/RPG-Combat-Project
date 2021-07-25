@@ -64,6 +64,12 @@ namespace RPG.Dialogue
         }
         
 #endif
+
+        public DialogueNode GetRootNode()
+        {
+            return nodes[0];
+        }
+        
         private void OnValidate()
         {
             nodeLookup.Clear();
@@ -77,9 +83,9 @@ namespace RPG.Dialogue
             return nodes;
         }
         
-        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode currentNode)
         {
-            foreach (string childID in parentNode.GetChildren())
+            foreach (string childID in currentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
@@ -88,6 +94,26 @@ namespace RPG.Dialogue
             }
         }
 
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(currentNode))
+            {
+                if (!node.IsPlayerSpeaking())
+                {
+                    yield return node;
+                }
+            }
+        }
+        public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode parentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(parentNode))
+            {
+                if (node.IsPlayerSpeaking())
+                {
+                    yield return node;
+                }
+            }
+        }
 
 
         public void OnBeforeSerialize()
