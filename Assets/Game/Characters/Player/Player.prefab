@@ -110,6 +110,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19ff972ec6859b48870488d7b1e81b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8001666453112367856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490082940595105697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5201e443bf3d50d4ca9a7f4648700c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8172630087384327113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +275,11 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 1818862415119840927}
+    - target: {fileID: 741550429382981946, guid: 0aa84faba2294634081b2683fcb9988c,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 5680362339003206433, guid: 0aa84faba2294634081b2683fcb9988c,
         type: 3}
       propertyPath: healthPoints

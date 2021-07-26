@@ -56,6 +56,7 @@ namespace GameDevTV.Saving
 
         public void Load(string saveFile)
         {
+            print("Loading from " + saveFile );
             RestoreState(LoadFile(saveFile));
         }
 

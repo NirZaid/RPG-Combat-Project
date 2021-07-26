@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace RPG.Dialogue
         [SerializeField] private Rect rect = new Rect(0,0, 200, 100);
         [SerializeField] private string onEnterAction;
         [SerializeField] private string onExitAction;
+        [SerializeField] private Condition condition;
 
         public Rect GetRect()
         {
@@ -62,7 +64,6 @@ namespace RPG.Dialogue
                 Undo.RecordObject(this, "Update Dialogue Text");
                 text = newText;
                 EditorUtility.SetDirty(this);
-
             }
         }
 
@@ -89,6 +90,10 @@ namespace RPG.Dialogue
         }
 
 #endif
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
     }
     
 

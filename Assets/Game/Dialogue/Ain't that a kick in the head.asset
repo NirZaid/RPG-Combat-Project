@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4706283611818607900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 6c704cf0-21c4-464b-9e75-0ff327f84a20
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sure, Crouch for a second
+  children:
+  - cbd285c5-620c-44f8-aea6-2ec10ce14dc9
+  rect:
+    serializedVersion: 2
+    x: 250
+    y: 112
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        paramaters:
+        - Ain't that a kick in the head
+        negate: 1
+--- !u!114 &-2839452393978509230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: f6fa1cb8-649d-4e9f-aa6c-b28cabf1acdf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm still searching for the boots.
+  children:
+  - e9d26470-a124-45a9-9d66-dd0b11062633
+  rect:
+    serializedVersion: 2
+    x: 261
+    y: 225
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        paramaters:
+        - Ain't that a kick in the head
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        paramaters:
+        - Ain't that a kick in the head
+        negate: 1
+--- !u!114 &-2605444723201017043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 63320f33-8c7d-499b-8a29-e1e71548602d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Kick me in the head!
+  children:
+  - 6ac70b9d-4f47-4ef9-a991-5316a8b35cb5
+  - 6c704cf0-21c4-464b-9e75-0ff327f84a20
+  - f6fa1cb8-649d-4e9f-aa6c-b28cabf1acdf
+  - 51e388da-f97c-47c0-8e20-68afe82b6085
+  rect:
+    serializedVersion: 2
+    x: 1
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-299388519083554650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 6ac70b9d-4f47-4ef9-a991-5316a8b35cb5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Umm... No.
+  children:
+  - e0e7d6e8-064c-4911-bd98-5cc4e24042c9
+  rect:
+    serializedVersion: 2
+    x: 249
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d7c5c2ba9374540a2a963ff8c106b7, type: 3}
+  m_Name: Ain't that a kick in the head
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2605444723201017043}
+  - {fileID: -299388519083554650}
+  - {fileID: -4706283611818607900}
+  - {fileID: 730968393020272232}
+  - {fileID: -2839452393978509230}
+  - {fileID: 7643472272610657869}
+  - {fileID: 6992714842115792671}
+  - {fileID: 4711010123942477070}
+  - {fileID: 4851758824266150270}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &730968393020272232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: cbd285c5-620c-44f8-aea6-2ec10ce14dc9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: No! you don't get it! I want you to kick me with the "Great Ibuki Boot"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 506
+    y: 150
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &4711010123942477070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: 51e388da-f97c-47c0-8e20-68afe82b6085
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I Have the boots!
+  children:
+  - d06f0a2f-c974-4f40-8b62-2d19daaefe92
+  rect:
+    serializedVersion: 2
+    x: 231
+    y: 341
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        paramaters:
+        - Ain't that a kick in the head
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        paramaters:
+        - Ain't that a kick in the head
+        negate: 1
+      - predicate: HasInventoryItem
+        paramaters:
+        - eeb0ac56-407a-4e63-b980-1ed3f3367336
+        negate: 0
+--- !u!114 &4851758824266150270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: d06f0a2f-c974-4f40-8b62-2d19daaefe92
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: YEAH! KICK ME!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 507
+    y: 356
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6992714842115792671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: e0e7d6e8-064c-4911-bd98-5cc4e24042c9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: :(
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 499
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7643472272610657869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf6debc4cf59c459e0a9bea4c9ae72, type: 3}
+  m_Name: e9d26470-a124-45a9-9d66-dd0b11062633
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh right! i forgot.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 509
+    y: 256
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []

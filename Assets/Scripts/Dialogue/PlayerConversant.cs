@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using RPG.Core;
 using UnityEngine;
 using Random = System.Random;
 
@@ -37,6 +38,22 @@ namespace RPG.Dialogue
             }
         }
 
+        private IEnumerable<DialogueNode> FilterOnCondition(IEnumerable<DialogueNode> inputNodes)
+        {
+            foreach (DialogueNode node in inputNodes)
+            {
+                if (node.CheckCondition(GetEvaluators()))
+                {
+                    yield return node;
+                }
+            }
+        }
+
+        private IEnumerable<IPredicateEvaluator> GetEvaluators()
+        {
+            return GetComponents<IPredicateEvaluator>();
+        }
+
         public bool IsChoosing()
         {
             return isChoosing;
@@ -58,7 +75,6 @@ namespace RPG.Dialogue
             {
                 return "";
             }
-
             return currentNode.GetText();
         }
 
@@ -74,7 +90,7 @@ namespace RPG.Dialogue
 
         public void Next()
         {
-            int numOfPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            int numOfPlayerResponses = FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode)).Count();
             if (numOfPlayerResponses > 0)
             {
                 isChoosing = true;
@@ -82,7 +98,7 @@ namespace RPG.Dialogue
                 onConversationUpdated();
                 return;
             }
-            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            DialogueNode[] children = FilterOnCondition(currentDialogue.GetAIChildren(currentNode)).ToArray();
             int randomIndex = UnityEngine.Random.Range(0, children.Length);
             TriggerExitAction();
             currentNode = children[randomIndex];
@@ -97,7 +113,7 @@ namespace RPG.Dialogue
                 return false;
             }
 
-            return currentDialogue.GetAllChildren(currentNode).Count() > 0;
+            return FilterOnCondition(currentDialogue.GetAllChildren(currentNode)).Count() > 0;
         }
 
 
@@ -111,10 +127,7 @@ namespace RPG.Dialogue
 
         public IEnumerable<DialogueNode> GetChoices()
         {
-            foreach (DialogueNode node in currentDialogue.GetPlayerChildren(currentNode))
-            {
-                yield return node;
-            }
+            return FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode));
 
         }
 
