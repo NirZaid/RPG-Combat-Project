@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133cd99fcea7f554aa0362672d361f4b, type: 3}
+  m_Name: Potion of Potionality
+  m_EditorClassIdentifier: 
+  itemID: 2ccea6cc-7913-428b-9e2c-9d9171f6fea8
+  displayName: Potion of Potionality
+  description: It does things.
+  icon: {fileID: 21300000, guid: f1dd815974b2d4240a6bc912d6585497, type: 3}
+  pickup: {fileID: 1361963723457814590, guid: 8c0c69d539fb00544987dd10a3ee9a08, type: 3}
+  stackable: 0
+  price: 11.99
+  category: 3
+  allowedEquipLocation: 7
+  additiveModifiers: []
+  percentageModifiers: []
