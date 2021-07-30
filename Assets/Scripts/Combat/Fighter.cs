@@ -186,6 +186,11 @@ namespace RPG.Combat
         {
             return target;
         }
+
+        public Transform GetHandTransform(bool isRightHand)
+        {
+            return isRightHand ? rightHandTransform : leftHandTransform;
+        }
     }
 }
 

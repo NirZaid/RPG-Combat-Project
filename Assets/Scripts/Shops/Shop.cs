@@ -204,6 +204,11 @@ namespace RPG.Shops
             }
             AddToTransaction(item, -1);
             shopperInventory.RemoveFromSlot(slot, 1);
+            if (!stockSold.ContainsKey(item))
+            {
+                stockSold[item] = 0;
+            }
+
             stockSold[item]--;
             shopperPurse.UpdateBalance(price);
         }

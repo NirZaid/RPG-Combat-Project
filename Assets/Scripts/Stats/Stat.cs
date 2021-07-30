@@ -3,5 +3,7 @@
     Health,
     ExperienceReward,
     ExperienceToLevelUp,
-    Damage
+    Damage,
+    Mana,
+    ManaRegen
 }

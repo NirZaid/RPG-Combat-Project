@@ -1,4 +1,5 @@
 ﻿using System;
+using GameDevTV.Inventories;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Attributes;
@@ -21,12 +22,15 @@ namespace RPG.Control
         [SerializeField] private float raycastRadius = 1f;
         [SerializeField] private CursorMapping[] cursorMappings;
         [SerializeField] private float maxNavMeshProjectionDistance = 1f;
-        
+        [SerializeField] private int numberOfAbilities = 6;
+
+        private ActionStore _actionStore;
         private Health _health;
         private bool isDraggingUI = false;
 
         private void Awake()
         {
+            _actionStore = GetComponent<ActionStore>();
             _health = GetComponent<Health>();
         }
         
@@ -42,7 +46,8 @@ namespace RPG.Control
                 SetCursor(CursorType.None);
                 return;
             }
-
+            UseAbilities();
+            
             if (InteractWithComponent())
             {
                 return;
@@ -52,6 +57,17 @@ namespace RPG.Control
                 return;
             }
             SetCursor(CursorType.None);
+        }
+
+        private void UseAbilities()
+        {
+            for (int i = 0; i < numberOfAbilities; i++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+                {
+                    _actionStore.Use(i, gameObject);
+                }
+            }
         }
 
         private bool InteractWithComponent()
@@ -169,7 +185,7 @@ namespace RPG.Control
         }
 
      
-        private static Ray GetMouseRay()
+        public static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }

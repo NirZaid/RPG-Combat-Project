@@ -18,11 +18,11 @@ namespace RPG.Combat
         
         private float damage;
         private GameObject instigator;
+        private Vector3 targetPoint;
+
         private void Update()
         {
-            if(target == null)
-                return;
-            if (isHoming && !target.isDead)
+            if (target != null && isHoming && !target.isDead)
             {
                 transform.LookAt(GetAimLocation());
             }
@@ -36,7 +36,18 @@ namespace RPG.Combat
     
         public void SetTarget(Health target,GameObject instigator, float damage)
         {
+           SetTarget(instigator, damage, target);
+        }
+
+        public void SetTarget(Vector3 targetPoint, GameObject instigator, float damage)
+        {
+            SetTarget(instigator, damage, null, targetPoint);
+        }
+
+        public void SetTarget(GameObject instigator, float damage, Health target = null, Vector3 targetPoint = default)
+        {
             this.target = target;
+            this.targetPoint = targetPoint;
             this.damage = damage;
             this.instigator = instigator;
             
@@ -45,6 +56,10 @@ namespace RPG.Combat
     
         private Vector3 GetAimLocation()
         {
+            if (target == null)
+            {
+                return targetPoint;
+            }
             CapsuleCollider targetCollider = target.GetComponent<CapsuleCollider>();
             if (targetCollider == null)
             {
@@ -55,15 +70,21 @@ namespace RPG.Combat
     
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<Health>() != target)
+            Health health = other.GetComponent<Health>();
+            if (target != null && health != target)
             {
                 return;
             }
-            if (target.isDead)
+            if (health == null || health.isDead)
             {
                 return;
             }
-            target.TakeDamage(instigator, damage);
+
+            if (other.gameObject == instigator)
+            {
+                return;
+            }
+            health.TakeDamage(instigator, damage);
             projectileSpeed = 0;
             onHit.Invoke();
     
@@ -77,6 +98,8 @@ namespace RPG.Combat
             }
             Destroy(gameObject, lifeAfterImpact);
         }
+
+        
     }
 }
 

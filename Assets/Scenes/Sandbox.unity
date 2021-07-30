@@ -405,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
       propertyPath: stockConfig.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -421,6 +421,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
+      propertyPath: stockConfig.Array.data[2].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 883aba185ef93404689a84d1d3008605,
+        type: 2}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
       propertyPath: stockConfig.Array.data[0].initialStock
       value: 13
       objectReference: {fileID: 0}
@@ -428,6 +434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stockConfig.Array.data[1].initialStock
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[2].initialStock
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -441,8 +452,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
+      propertyPath: stockConfig.Array.data[2].levelToUnlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
       propertyPath: stockConfig.Array.data[1].buyingDiscountPercentage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[2].buyingDiscountPercentage
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 9079161000164784064, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -2098,7 +2119,7 @@ GameObject:
   - component: {fileID: 766950111}
   - component: {fileID: 766950110}
   - component: {fileID: 766950109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3212,7 +3233,7 @@ PrefabInstance:
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
       propertyPath: stockConfig.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -3258,6 +3279,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
+      propertyPath: stockConfig.Array.data[5].item
+      value: 
+      objectReference: {fileID: 11400000, guid: d549d00bec101aa4baeeb05417e8f015,
+        type: 2}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[6].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e79937ce458d3748855b277e848e99b,
+        type: 2}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
       propertyPath: stockConfig.Array.data[0].initialStock
       value: 2
       objectReference: {fileID: 0}
@@ -3280,6 +3313,16 @@ PrefabInstance:
         type: 3}
       propertyPath: stockConfig.Array.data[4].initialStock
       value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[5].initialStock
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[6].initialStock
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -3308,6 +3351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
+      propertyPath: stockConfig.Array.data[5].levelToUnlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
       propertyPath: stockConfig.Array.data[0].buyingDiscountPercentage
       value: 4
       objectReference: {fileID: 0}
@@ -3330,6 +3378,16 @@ PrefabInstance:
         type: 3}
       propertyPath: stockConfig.Array.data[4].buyingDiscountPercentage
       value: 15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[5].buyingDiscountPercentage
+      value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150216032585966908, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
+        type: 3}
+      propertyPath: stockConfig.Array.data[6].buyingDiscountPercentage
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 9079161000164784064, guid: e2d5b6e13bb20f14c99d119c2813cb4f,
         type: 3}
@@ -4679,7 +4737,7 @@ PrefabInstance:
     - target: {fileID: 7075703640326675544, guid: 81b1aee1d6f8e104bbccec157ffcef86,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -484.02228
+      value: -570.7487
       objectReference: {fileID: 0}
     - target: {fileID: 7075914210348010950, guid: 81b1aee1d6f8e104bbccec157ffcef86,
         type: 3}
@@ -4894,7 +4952,7 @@ PrefabInstance:
     - target: {fileID: 7306436254519070517, guid: 81b1aee1d6f8e104bbccec157ffcef86,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7780548
+      value: 1.7777778
       objectReference: {fileID: 0}
     - target: {fileID: 7418605614843035714, guid: 81b1aee1d6f8e104bbccec157ffcef86,
         type: 3}
@@ -5680,7 +5738,7 @@ MonoBehaviour:
   - {fileID: 365215207}
   - {fileID: 401106370}
   - {fileID: 1289089140}
-  activateOnStart: 0
+  activateOnStart: 1
 --- !u!114 &1289089149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7569,7 +7627,7 @@ GameObject:
   - component: {fileID: 1814598007}
   - component: {fileID: 1814598009}
   - component: {fileID: 1814598008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain_(-50.0, 0.0, -150.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
