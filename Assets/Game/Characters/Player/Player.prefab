@@ -101,6 +101,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280ad8baf3b62e341b9d013ca6f7f702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4775927241416848550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490082940595105697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35e4691c6affee40ad066d735615a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6296036606184329284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scatterDistance: 1
   dropLibray: {fileID: 0}
---- !u!114 &4775927241416848550
+--- !u!114 &9128444477154194891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,10 +198,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2490082940595105697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b35e4691c6affee40ad066d735615a53, type: 3}
+  m_Script: {fileID: 11500000, guid: 9998c297d9ddfa34f81c5bd7bff17ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMana: 200
+  bonusConfig:
+  - trait: 0
+    stat: 3
+    additiveBonusPerPoint: 2
+    percentageBonusPerPoint: 1
+  - trait: 2
+    stat: 0
+    additiveBonusPerPoint: 2
+    percentageBonusPerPoint: 1
+  - trait: 4
+    stat: 4
+    additiveBonusPerPoint: 5
+    percentageBonusPerPoint: 0
+  - trait: 4
+    stat: 5
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - trait: 3
+    stat: 7
+    additiveBonusPerPoint: 1
+    percentageBonusPerPoint: 0
 --- !u!1001 &1818862415119515419
 PrefabInstance:
   m_ObjectHideFlags: 0

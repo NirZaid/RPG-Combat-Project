@@ -5,5 +5,7 @@
     ExperienceToLevelUp,
     Damage,
     Mana,
-    ManaRegen
+    ManaRegen,
+    TotalTraitPoints,
+    BuyingDiscountPecentage
 }

@@ -11,10 +11,21 @@ namespace RPG.Stats
         public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
             BuildLookUp();
-            float[] levels = lookupTable[characterClass][stat];
-            if (levels.Length < level)
+
+            if (!lookupTable[characterClass].ContainsKey(stat))
             {
                 return 0;
+            }
+
+            float[] levels = lookupTable[characterClass][stat];
+            
+            if (levels.Length == 0)
+            {
+                return 0;
+            }
+            if (levels.Length < level)
+            {
+                return levels[levels.Length - 1];
             }
             return levels[level - 1];
         }
