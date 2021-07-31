@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using GameDevTV.Saving;
+using UnityEngine.SceneManagement;
+
 namespace RPG.SceneManagement
 {
     public class SavingWrapper : MonoBehaviour
     {
-        private const string defaultSaveFile = "save";
+        private const string currentSaveKey = "currentSaveName";
         [SerializeField] private float fadeInTime = 0.3f;
+        [SerializeField] private int firstSceneBuildIndex =1;
+        [SerializeField] private int menuLevelBuildIndex = 0;
 
-        private void Awake()
-        {
-            StartCoroutine(LoadLastScene());
-        }
 
         private IEnumerator LoadLastScene()
         {
-            
-            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
             Fader fader = FindObjectOfType<Fader>();
-            
             fader.FadeOutImmediate();
+
+            yield return GetComponent<SavingSystem>().LoadLastScene(GetCurrentSave());
+            
             yield return fader.FadeIn(fadeInTime);
         }
 
@@ -44,17 +45,70 @@ namespace RPG.SceneManagement
 
         public void Load()
         {
-            GetComponent<SavingSystem>().Load(defaultSaveFile);
+            GetComponent<SavingSystem>().Load(GetCurrentSave());
         }
 
         public void Save()
         {
-            GetComponent<SavingSystem>().Save(defaultSaveFile);
+            GetComponent<SavingSystem>().Save(GetCurrentSave());
         }
 
         public void Delete()
         {
-            GetComponent<SavingSystem>().Delete(defaultSaveFile);
+            GetComponent<SavingSystem>().Delete(GetCurrentSave());
+        }
+
+        public void ContinueGame()
+        {
+            StartCoroutine(LoadLastScene());
+        }
+
+        public void NewGame(string saveFile)
+        {
+            SetCurrentSave(saveFile);
+            StartCoroutine(LoadFirstScene());
+        }
+
+        private IEnumerator LoadFirstScene()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            fader.FadeOutImmediate();
+            yield return SceneManager.LoadSceneAsync(firstSceneBuildIndex);
+            yield return fader.FadeIn(fadeInTime);
+        }
+        
+        public void SetCurrentSave(string saveFile)
+        {
+            PlayerPrefs.SetString(currentSaveKey, saveFile);
+        }
+
+        public string GetCurrentSave()
+        {
+            return PlayerPrefs.GetString(currentSaveKey);
+        }
+
+        public IEnumerable<string> ListSaves()
+        {
+            return GetComponent<SavingSystem>().ListSaves();
+        }
+
+        public void LoadGame(string saveFile)
+        {
+            SetCurrentSave(saveFile);
+            ContinueGame();
+        }
+
+        public void LoadMenu()
+        {
+            StartCoroutine(LoadMenuScene());
+        }
+
+        private IEnumerator LoadMenuScene()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            fader.FadeOutImmediate();
+            yield return SceneManager.LoadSceneAsync(menuLevelBuildIndex);
+            yield return fader.FadeIn(fadeInTime);
         }
     }
 }

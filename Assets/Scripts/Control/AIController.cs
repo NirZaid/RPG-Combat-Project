@@ -4,6 +4,7 @@ using RPG.Core;
 using RPG.Movement;
 using UnityEngine;
 using RPG.Attributes;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -38,6 +39,8 @@ namespace RPG.Control
             _fighter = GetComponent<Fighter>();
             _health = GetComponent<Health>();
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
+            guardPosition.ForceInit();
+
         }
 
         private Vector3 GetGuardPosition()
@@ -47,14 +50,13 @@ namespace RPG.Control
 
         private void Start()
         {
-            guardPosition.ForceInit();
         }
 
 
         // Update is called once per frame
         void Update()
         {
-            if(_health.isDead)
+            if(_health.IsDead())
                 return;
             if (IsAggrevated() && _fighter.CanAttack(player)) // Attacking 
             {
@@ -160,6 +162,15 @@ namespace RPG.Control
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
+        }
+
+        public void Reset()
+        {
+              GetComponent<NavMeshAgent>().Warp(guardPosition.value);
+             timeSinceArrivedAtWaypoint = Mathf.Infinity;
+             timeSinceLastSawPlayer = Mathf.Infinity;
+             timeSinceAggroed = Mathf.Infinity;
+             currentWaypointIndex = 0;
         }
     }
         

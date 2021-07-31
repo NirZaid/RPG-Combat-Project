@@ -13,14 +13,19 @@ namespace RPG.Attributes
     {
         [SerializeField] private float regenerationPercentage = 70;
         [SerializeField] private TakeDamageEvent takeDamage;
-        [SerializeField] private UnityEvent onDie;
+        public UnityEvent onDie;
+
+        private bool wasDeadLastFrame = false;
         
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float>
         {
         }
-        
-        public bool isDead { get; private set; }
+
+        public bool IsDead()
+        {
+            return healthPoints.value <= 0;
+        }
         private LazyValue<float> healthPoints;
 
         private void Awake()
@@ -57,25 +62,37 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            if(isDead)
-                return;
+            
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
-            takeDamage.Invoke(damage);
-            if (healthPoints.value == 0)
+            if (IsDead())
             {
                 onDie.Invoke();
-                Die();
                 AwardExperience(instigator);
             }
+            else
+            {
+                takeDamage.Invoke(damage);
+            }
+            
+            UpdateState();
         }
 
-        private void Die()
+        private void UpdateState()
         {
-            if(isDead)
-                return;
-            GetComponent<Animator>().SetTrigger("die");
-            GetComponent<ActionScheduler>().CancelCurrentAction();
-            isDead = true;
+            Animator animator = GetComponent<Animator>();
+            if (!wasDeadLastFrame && IsDead())
+            {
+                animator.SetTrigger("die");
+                GetComponent<ActionScheduler>().CancelCurrentAction();
+            }
+
+            if (wasDeadLastFrame && !IsDead())
+            {
+                animator.Rebind();
+            }
+
+
+            wasDeadLastFrame = IsDead();
         }
 
         public object CaptureState()
@@ -86,10 +103,7 @@ namespace RPG.Attributes
         public void RestoreState(object state)
         {
             healthPoints.value = (float) state;
-            if (healthPoints.value <= 0)
-            {
-                Die();
-            }
+            UpdateState();
         }
 
         public float GetPercentage()
@@ -122,6 +136,7 @@ namespace RPG.Attributes
         public void Heal(float amount)
         {
             healthPoints.value = Mathf.Min(healthPoints.value + amount, GetMaxHealthPoints());
+            UpdateState();
         }
     }
     

@@ -15,7 +15,7 @@ namespace RPG.SceneManagement
 
         public void FadeOutImmediate()
         {
-            canvasGroup.alpha = 1;
+            GetComponent<CanvasGroup>().alpha = 1;
         }
 
         public Coroutine FadeIn(float time)
@@ -45,7 +45,7 @@ namespace RPG.SceneManagement
         {
             while (!Mathf.Approximately(canvasGroup.alpha, target))
             {
-                canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime / time);
+                canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.unscaledTime / time);
                 yield return null;
             }
         }

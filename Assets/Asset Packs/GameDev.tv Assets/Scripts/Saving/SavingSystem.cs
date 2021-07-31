@@ -74,6 +74,18 @@ namespace GameDevTV.Saving
             }
         }
 
+        public IEnumerable<string> ListSaves()
+        {
+            foreach (string path in Directory.EnumerateFiles(Application.persistentDataPath))
+            {
+                if (Path.GetExtension(path) == ".sav")
+                {
+                    yield return Path.GetFileNameWithoutExtension(path);
+                }
+            }
+
+        }
+
         private void SaveFile(string saveFile, object state)
         {
             string path = GetPathFromSaveFile(saveFile);

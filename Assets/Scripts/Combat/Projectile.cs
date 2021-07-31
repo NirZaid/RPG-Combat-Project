@@ -22,7 +22,7 @@ namespace RPG.Combat
 
         private void Update()
         {
-            if (target != null && isHoming && !target.isDead)
+            if (target != null && isHoming && !target.IsDead())
             {
                 transform.LookAt(GetAimLocation());
             }
@@ -75,7 +75,7 @@ namespace RPG.Combat
             {
                 return;
             }
-            if (health == null || health.isDead)
+            if (health == null || health.IsDead())
             {
                 return;
             }
